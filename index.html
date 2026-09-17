@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/los-primo-design-system-ffa3879c-56c4-45bf-a7a3-efcde97bcb46/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/los-primo-design-system-ffa3879c-56c4-45bf-a7a3-efcde97bcb46/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/los-primo-design-system-ffa3879c-56c4-45bf-a7a3-efcde97bcb46/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/los-primo-design-system-ffa3879c-56c4-45bf-a7a3-efcde97bcb46/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/los-primo-design-system-ffa3879c-56c4-45bf-a7a3-efcde97bcb46/styles.css">
+  <script src="_ds/los-primo-design-system-ffa3879c-56c4-45bf-a7a3-efcde97bcb46/_ds_bundle.js"></script>
+  <style>
+    body{margin:0;background:var(--papel);}
+    a{color:var(--link);}
+    a:hover{color:var(--link-hover);}
+    ::selection{background:var(--mustard);color:var(--tinta);}
+  </style>
+</helmet>
+
+<div style="font-family:var(--font-text);background:var(--papel);color:var(--tinta);overflow-x:hidden;">
+
+  <!-- NAV -->
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:20px clamp(20px,5vw,64px);position:sticky;top:0;background:var(--papel-90);backdrop-filter:blur(4px);z-index:10;border-bottom:1px solid var(--border-subtle);">
+    <img src="_ds/los-primo-design-system-ffa3879c-56c4-45bf-a7a3-efcde97bcb46/assets/logo-wordmark-ink.png" alt="Los Primo' EP" style="height:38px;width:auto;">
+    <div style="display:flex;align-items:center;gap:clamp(12px,3vw,28px);flex-wrap:wrap;">
+      <a href="#ver" style="font-family:var(--font-text);font-weight:700;font-size:14px;color:var(--tinta);text-decoration:none;">Video</a>
+      <a href="#escuchar" style="font-family:var(--font-text);font-weight:700;font-size:14px;color:var(--tinta);text-decoration:none;">Escuchar</a>
+      <a href="#tablero" style="font-family:var(--font-text);font-weight:700;font-size:14px;color:var(--tinta);text-decoration:none;">Tablero</a>
+      <x-import component-from-global-scope="LosPrimoDesignSystem_ffa387.Button" hint-size="auto,40px" variant="ghost" size="sm">
+        <a href="#causa" style="color:inherit;text-decoration:none;">La causa ↓</a>
+      </x-import>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="position:relative;padding:clamp(48px,8vw,96px) clamp(20px,5vw,64px) clamp(56px,8vw,88px);background:var(--papel);overflow:hidden;">
+    <img src="_ds/los-primo-design-system-ffa3879c-56c4-45bf-a7a3-efcde97bcb46/assets/illustration-circulo-colectivo.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:min(46vw,480px);opacity:0.1;pointer-events:none;">
+    <div style="position:relative;max-width:760px;display:flex;flex-direction:column;align-items:flex-start;gap:20px;">
+      <x-import component-from-global-scope="LosPrimoDesignSystem_ffa387.Badge" hint-size="auto,28px" tone="mustard">Causa · Terremoto Venezuela 2026</x-import>
+      <h1 style="font-family:var(--font-display);text-transform:uppercase;font-size:var(--text-display-xl);line-height:var(--lh-display);letter-spacing:var(--ls-display);margin:0;">Un primo suena<br>por todos</h1>
+      <p style="font-size:var(--text-body-lg);line-height:var(--lh-body);color:var(--text-muted);margin:0;max-width:560px;">Un primo, sin importar el silencio, responde cuando la vida pesa. Cada play del EP <strong style="color:var(--tinta);">Los Primo'</strong> se convierte en ayuda directa para los afectados por el sismo en Venezuela del 24 de junio de 2026.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;">
+        <x-import component-from-global-scope="LosPrimoDesignSystem_ffa387.Button" hint-size="auto,52px" variant="primary" size="lg">
+          <a href="#escuchar" style="color:inherit;text-decoration:none;">Escuchar en Spotify ↗</a>
+        </x-import>
+        <x-import component-from-global-scope="LosPrimoDesignSystem_ffa387.Button" hint-size="auto,52px" variant="secondary" size="lg">
+          <a href="#ver" style="color:inherit;text-decoration:none;">Ver en YouTube ↗</a>
+        </x-import>
+      </div>
+      <a href="#tablero" style="font-size:14px;font-weight:700;color:var(--terracota);text-decoration:none;">Ver cuánto se ha recaudado hasta ahora ↓</a>
+    </div>
+  </div>
+
+  <!-- MEDIA: VIDEO + SPOTIFY -->
+  <div id="ver" style="padding:0 clamp(20px,5vw,64px) clamp(56px,8vw,88px);display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;">
+    <span style="font-family:var(--font-display);font-size:13px;letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--terracota);">Video oficial</span>
+    <h2 style="font-family:var(--font-display);text-transform:uppercase;font-size:var(--text-display-md);margin:0;max-width:600px;">Míralo, siéntelo, compártelo</h2>
+    <p style="font-size:var(--text-body-lg);line-height:var(--lh-body);color:var(--text-muted);margin:0;max-width:520px;">El video oficial detrás del EP — la historia visual de un colectivo que respondió cuando la vida pesó.</p>
+    <a href="https://www.youtube.com/watch?v=nLz7ZG7Nwro" target="_blank" rel="noopener" style="position:relative;width:100%;aspect-ratio:16/9;max-width:1440px;border-radius:var(--radius-lg);background:var(--tinta);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:var(--shadow-pop);text-decoration:none;margin-top:8px;">
+      <img src="https://img.youtube.com/vi/nLz7ZG7Nwro/maxresdefault.jpg" alt="Los Primo' EP - Video oficial" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75;">
+      <div style="position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;color:var(--papel);">
+        <div style="width:96px;height:96px;border-radius:50%;background:var(--mustard);display:flex;align-items:center;justify-content:center;">
+          <div style="width:0;height:0;border-top:18px solid transparent;border-bottom:18px solid transparent;border-left:28px solid var(--tinta);margin-left:6px;"></div>
+        </div>
+        <span style="font-family:var(--font-text);font-weight:700;font-size:14px;background:var(--tinta);padding:8px 18px;border-radius:var(--radius-pill);">Ver en YouTube ↗</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- GALERIA -->
+  <div style="padding:0 clamp(20px,5vw,64px) clamp(56px,8vw,88px);display:flex;flex-direction:column;gap:14px;">
+    <span style="font-family:var(--font-display);font-size:13px;letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--terracota);">En vivo</span>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+      <img src="assets/live-3.png" alt="Los Primo' en vivo" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);">
+      <img src="assets/live-1.png" alt="Los Primo' en vivo" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);">
+      <img src="assets/live-2.png" alt="Los Primo' en vivo" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);">
+      <img src="assets/live-4.png" alt="Los Primo' en vivo" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);">
+    </div>
+  </div>
+
+  <div id="escuchar" style="padding:clamp(40px,6vw,64px) clamp(20px,5vw,64px) clamp(24px,4vw,40px);max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px;align-items:center;justify-content:center;">
+    <div style="display:flex;flex-direction:column;align-items:flex-start;gap:16px;">
+      <span style="font-family:var(--font-display);font-size:13px;letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--terracota);">Escuchar el EP</span>
+      <h2 style="font-family:var(--font-display);text-transform:uppercase;font-size:var(--text-display-lg);line-height:var(--lh-display);margin:0;">Dale play, así de fácil se suma</h2>
+      <p style="font-size:var(--text-body-lg);line-height:var(--lh-body);color:var(--text-muted);margin:0;max-width:440px;">No cuesta nada escuchar el EP completo — y cada reproducción es lo que convertimos en ayuda para Venezuela.</p>
+      <x-import component-from-global-scope="LosPrimoDesignSystem_ffa387.Button" hint-size="auto,52px" variant="primary" size="lg">
+        <a href="https://open.spotify.com/intl-es/album/6FJYAeVvW98ol0OjVg1Nz5" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Abrir en Spotify ↗</a>
+      </x-import>
+    </div>
+    <div style="width:100%;max-width:300px;justify-self:center;background:var(--tinta);border-radius:44px;padding:16px 12px 22px;box-shadow:var(--shadow-pop);display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div style="width:44px;height:5px;border-radius:var(--radius-pill);background:var(--papel-90);opacity:.4;"></div>
+      <div style="width:100%;background:var(--surface-card);border-radius:28px;overflow:hidden;">
+        <iframe src="https://open.spotify.com/embed/album/6FJYAeVvW98ol0OjVg1Nz5" title="Los Primo' EP en Spotify" style="width:100%;border:0;display:block;" height="560" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAUSA -->
+  <div id="causa" style="padding:clamp(40px,6vw,64px) clamp(20px,5vw,64px) clamp(56px,8vw,88px);max-width:1100px;margin:0 auto;border-top:1px solid var(--border-subtle);">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;align-items:start;padding-top:clamp(40px,6vw,64px);">
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <x-import component-from-global-scope="LosPrimoDesignSystem_ffa387.Badge" hint-size="auto,28px" tone="outline">La causa</x-import>
+        <span style="font-family:var(--font-display);text-transform:uppercase;font-size:clamp(36px,5vw,56px);line-height:0.9;color:var(--terracota);">24.06<br>2026</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:18px;">
+        <h2 style="font-family:var(--font-display);text-transform:uppercase;font-size:var(--text-display-md);line-height:1.1;margin:0;">Terremoto en Venezuela</h2>
+        <p style="font-size:var(--text-body-lg);line-height:var(--lh-body);color:var(--text-muted);margin:0;max-width:560px;">Estos fondos van directo a los afectados por el sismo en Venezuela 2026.</p>
+        <p style="font-size:var(--text-body-lg);line-height:var(--lh-body);color:var(--text-muted);margin:0;max-width:560px;">El EP <strong style="color:var(--tinta);">"Los Primo'"</strong> nace como respuesta del colectivo: un lanzamiento cuyo alcance en streaming se traduce en ayuda concreta, sin intermediarios ni relleno — solo el play que ya ibas a dar, sumando.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLERO DE RECAUDACION -->
+  <div id="tablero" style="padding:clamp(56px,8vw,88px) clamp(20px,5vw,64px);background:var(--tinta);color:var(--papel);background-image:var(--dot-texture);background-size:var(--dot-texture-size);">
+    <div style="max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:36px;">
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px;">
+        <x-import component-from-global-scope="LosPrimoDesignSystem_ffa387.Badge" hint-size="auto,28px" tone="mustard">Tablero de recaudación</x-import>
+        <h2 style="font-family:var(--font-display);text-transform:uppercase;font-size:var(--text-display-lg);line-height:var(--lh-display);margin:0;">Sigamos sumando</h2>
+        <p style="font-size:var(--text-body-lg);color:var(--papel-90);opacity:.75;margin:0;max-width:560px;">Cada tres meses mostramos aquí cuánto se ha recaudado con las reproducciones del EP y a dónde va destinado.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+        <div style="background:var(--papel);color:var(--tinta);border-radius:var(--radius-lg);padding:40px 32px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow-pop);">
+          <span style="font-family:var(--font-display);font-size:14px;letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--terracota);">Corte actual</span>
+          <span style="font-family:var(--font-display);font-size:44px;text-transform:uppercase;">Mes 1</span>
+          <span style="font-size:15px;color:var(--text-muted);">1 mes después del lanzamiento</span>
+        </div>
+        <div style="background:var(--papel);color:var(--tinta);border-radius:var(--radius-lg);padding:40px 32px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow-pop);">
+          <span style="font-family:var(--font-display);font-size:14px;letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--terracota);">Reproducciones</span>
+          <span style="font-family:var(--font-display);font-size:56px;">{{ playsLabel }}</span>
+          <span style="font-size:15px;color:var(--text-muted);">plays acumulados</span>
+        </div>
+        <div style="background:var(--mustard);color:var(--tinta);border-radius:var(--radius-lg);padding:40px 32px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow-pop);">
+          <span style="font-family:var(--font-display);font-size:14px;letter-spacing:var(--ls-caps);text-transform:uppercase;">Recaudado</span>
+          <span style="font-family:var(--font-display);font-size:56px;">{{ amountLabel }}</span>
+          <span style="font-size:15px;opacity:.75;">destinado a los afectados</span>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+        <span style="font-family:var(--font-display);font-size:12px;letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--papel-90);opacity:.6;">Próximos cortes</span>
+        <sc-for list="{{ checkpoints }}" as="cp" hint-placeholder-count="3">
+          <span style="font-family:var(--font-text);font-weight:500;font-size:13px;padding:6px 14px;border-radius:var(--radius-pill);border:1px solid var(--papel-90);opacity:{{ cp.opacity }};color:var(--papel);">{{ cp.label }}</span>
+        </sc-for>
+      </div>
+      <p style="font-size:13px;color:var(--papel-90);opacity:.55;margin:0;">El corte se actualiza cada tres meses con datos de reproducciones y regalías reportadas por las plataformas.</p>
+    </div>
+  </div>
+
+  <!-- TRACKLIST + CREDITOS -->
+  <div style="padding:clamp(56px,8vw,88px) clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;">
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <span style="font-family:var(--font-display);font-size:14px;letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--terracota);">Tracklist</span>
+      <sc-for list="{{ tracks }}" as="track" hint-placeholder-count="4">
+        <div style="display:flex;align-items:baseline;gap:20px;padding:16px 0;border-bottom:1px solid var(--border-subtle);">
+          <span style="font-family:var(--font-display);font-size:28px;color:var(--text-muted);width:32px;">{{ track.n }}</span>
+          <span style="font-family:var(--font-display);text-transform:uppercase;font-size:26px;letter-spacing:var(--ls-display);">{{ track.name }}</span>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <span style="font-family:var(--font-display);font-size:14px;letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--terracota);">Créditos</span>
+      <p style="font-family:var(--font-display);text-transform:uppercase;font-size:26px;line-height:1.3;letter-spacing:var(--ls-display);margin:0;">Horus · Tayko · Yakari · Rino · Robert Tiamo</p>
+      <p style="font-size:18px;line-height:var(--lh-body);color:var(--text-muted);margin:0;">Producción: <strong style="color:var(--tinta);font-weight:700;">Solo Soul &amp; Diego Jara</strong>.</p>
+    </div>
+  </div>
+
+  <!-- COMO AYUDAR / COMPARTIR -->
+  <div style="padding:clamp(56px,8vw,88px) clamp(20px,5vw,64px);display:flex;flex-direction:column;align-items:flex-start;gap:20px;max-width:720px;">
+    <x-import component-from-global-scope="LosPrimoDesignSystem_ffa387.Badge" hint-size="auto,28px" tone="outline">Cómo ayudar</x-import>
+    <h2 style="font-family:var(--font-display);text-transform:uppercase;font-size:var(--text-display-md);margin:0;">Comparte, no hace falta más</h2>
+    <p style="font-size:var(--text-body-lg);line-height:var(--lh-body);color:var(--text-muted);margin:0;">No pedimos donaciones aparte: cada persona que escucha y comparte suma reproducciones, y las reproducciones son las que se convierten en ayuda.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;">
+      <x-import component-from-global-scope="LosPrimoDesignSystem_ffa387.Button" hint-size="auto,48px" variant="primary" onClick="{{ shareWhatsapp }}">Compartir en WhatsApp</x-import>
+      <x-import component-from-global-scope="LosPrimoDesignSystem_ffa387.Button" hint-size="auto,48px" variant="secondary" onClick="{{ shareTwitter }}">Compartir en X</x-import>
+      <x-import component-from-global-scope="LosPrimoDesignSystem_ffa387.Button" hint-size="auto,48px" variant="ghost" onClick="{{ shareInstagram }}">{{ igLabel }}</x-import>
+    </div>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div style="padding:clamp(56px,8vw,96px) clamp(20px,5vw,64px);background:var(--terracota);color:var(--papel);text-align:center;display:flex;flex-direction:column;align-items:center;gap:20px;">
+    <h2 style="font-family:var(--font-display);text-transform:uppercase;font-size:var(--text-display-lg);line-height:var(--lh-display);margin:0;">Sigamos sumando</h2>
+    <p style="font-family:var(--font-display);text-transform:uppercase;font-size:20px;letter-spacing:var(--ls-caps);margin:0;">Tu play cuenta</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px;">
+      <x-import component-from-global-scope="LosPrimoDesignSystem_ffa387.Button" hint-size="auto,52px" variant="primary" size="lg">
+        <a href="#escuchar" style="color:inherit;text-decoration:none;">Escuchar en Spotify ↗</a>
+      </x-import>
+      <x-import component-from-global-scope="LosPrimoDesignSystem_ffa387.Button" hint-size="auto,52px" variant="ghost" size="lg">
+        <a href="#ver" style="color:var(--papel);border-color:var(--papel);text-decoration:none;">Ver en YouTube ↗</a>
+      </x-import>
+    </div>
+  </div>
+
+  <div style="padding:24px clamp(20px,5vw,64px);text-align:center;color:var(--text-muted);font-size:13px;">
+    Los Primo' EP — un primo suena por todos.
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;plays&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:113000,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:0,&quot;step&quot;:1000,&quot;unit&quot;:&quot;plays&quot;,&quot;section&quot;:&quot;Tablero&quot;},&quot;amountUsd&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:150,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:0,&quot;step&quot;:10,&quot;unit&quot;:&quot;USD&quot;,&quot;section&quot;:&quot;Tablero&quot;}}">
+class Component extends DCLogic {
+  state = { igLabel: 'Copiar link para Instagram' };
+  shareText(){ return "Los Primo' EP — un primo suena por todos. Cada play ayuda a los afectados por el terremoto en Venezuela."; }
+  renderVals() {
+    var plays = this.props.plays ?? 113000;
+    var amount = this.props.amountUsd ?? 150;
+    var self = this;
+    var url = (typeof window !== 'undefined' && window.location) ? window.location.href : '';
+    return {
+      igLabel: this.state.igLabel,
+      shareWhatsapp: function(){ window.open('https://wa.me/?text=' + encodeURIComponent(self.shareText() + ' ' + url), '_blank'); },
+      shareTwitter: function(){ window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(self.shareText()) + '&url=' + encodeURIComponent(url), '_blank'); },
+      shareInstagram: function(){
+        if (navigator.clipboard) { navigator.clipboard.writeText(url); }
+        self.setState({ igLabel: 'Link copiado ✓' });
+        setTimeout(function(){ self.setState({ igLabel: 'Copiar link para Instagram' }); }, 2000);
+      },
+      playsLabel: (plays/1000).toFixed(0) + 'K',
+      amountLabel: '$' + amount + ' USD',
+      tracks: [
+        {n:1, name:"Los primo'"},
+        {n:2, name:'Vuelo alto'},
+        {n:3, name:'Sobre la montaña'},
+        {n:4, name:'Como los Ángeles'}
+      ],
+      checkpoints: [
+        {label:'Mes 1 · activo', opacity:1},
+        {label:'Mes 4 · próximo corte', opacity:0.55},
+        {label:'Mes 7', opacity:0.35},
+        {label:'Mes 10', opacity:0.35}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
