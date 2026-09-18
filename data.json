@@ -2,7 +2,7 @@
   "corte": "Mes 1",
   "corteSubtitle": "1 mes después del lanzamiento",
   "plays": 113000,
-  "amountUsd": 150,
+  "amountUsd": 152,
   "checkpoints": [
     { "label": "Mes 1 · activo", "active": true },
     { "label": "Mes 4 · próximo corte", "active": false },
